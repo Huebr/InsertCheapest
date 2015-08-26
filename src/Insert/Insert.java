@@ -136,9 +136,13 @@ public class Insert {
                 System.out.print(path.get(i));
                 if(i+1<path.size())System.out.print("-");
             }
-            System.out.print("\nN="+(matrix.get(0).size()+1));
+            System.out.print("\nN=" + (matrix.get(0).size() + 1));
+            System.out.print(" PONTOS=>");
             for(int i=0;i<path.size();i++){
                 System.out.print("("+cmatrix.get(path.get(i)-1).get(0)+","+cmatrix.get(path.get(i)-1).get(1)+")");
+                if(i+2<path.size())System.out.print(";");
+                else if(i+1<path.size())System.out.print("e");
+                else System.out.println(".");
             }
         }else{
             System.out.print("Tipo=3(Matriz nao-Simetrica):=>Solucao:=");
